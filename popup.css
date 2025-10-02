@@ -1,0 +1,130 @@
+:root {
+  color-scheme: light;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 320px;
+}
+
+main {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+h1 {
+  font-size: 18px;
+  margin: 0;
+}
+
+h2 {
+  font-size: 15px;
+  margin: 0;
+}
+
+.export-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  font-size: 12px;
+  gap: 4px;
+}
+
+select {
+  padding: 6px 8px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  background: white;
+  font-size: 12px;
+}
+
+button {
+  padding: 8px 10px;
+  border: none;
+  border-radius: 4px;
+  background: #005ea8;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button[disabled] {
+  background: #999;
+  cursor: not-allowed;
+}
+
+#config {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  padding: 12px;
+  background: rgba(0, 0, 0, 0.02);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+#config dl {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 8px;
+  row-gap: 6px;
+  margin: 0;
+}
+
+#config dt {
+  font-weight: 600;
+}
+
+#config dd {
+  margin: 0;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+  font-size: 12px;
+}
+
+.config-note {
+  margin: 0;
+  font-size: 11px;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+#status {
+  min-height: 24px;
+  font-size: 12px;
+}
+
+#status[data-mode="error"] {
+  color: #b00020;
+}
+
+#preview-table {
+  max-height: 160px;
+  overflow: auto;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 11px;
+}
+
+th,
+td {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  text-align: left;
+  padding: 6px;
+}
+
+tr:last-child td {
+  border-bottom: none;
+}

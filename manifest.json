@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "UOB Assignment Exporter",
+  "description": "Fetch UOB CMS assignment submissions and export formatted reports.",
+  "version": "1.0.0",
+  "permissions": [
+    "storage",
+    "tabs",
+    "scripting"
+  ],
+  "host_permissions": [
+    "https://cms.uobmydigitalspace.com/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "UOB Assignment Exporter"
+  }
+}

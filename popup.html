@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>UOB Assignment Exporter</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <main>
+      <h1>Assignment Exporter</h1>
+      <section id="config" aria-live="polite">
+        <h2>Current Scope</h2>
+        <dl>
+          <div>
+            <dt>Group Serial</dt>
+            <dd id="config-group"></dd>
+          </div>
+          <div>
+            <dt>Structure Serial</dt>
+            <dd id="config-structure"></dd>
+          </div>
+        </dl>
+        <p class="config-note">Values are detected from the active CMS tab. Update <code>DEFAULT_SERIALS</code> in <code>popup.js</code> if detection fails.</p>
+      </section>
+
+      <section id="status" aria-live="polite"></section>
+
+      <section id="preview" hidden>
+        <h2>Preview</h2>
+        <p id="summary"></p>
+        <div id="preview-table"></div>
+      </section>
+
+      <div class="export-controls">
+        <label>
+          Export Format
+          <select id="export-format">
+            <option value="html" selected>HTML</option>
+            <option value="pdf">PDF</option>
+          </select>
+        </label>
+        <button id="export-btn" type="button" disabled>Export Report</button>
+      </div>
+    </main>
+
+    <script src="popup.js"></script>
+  </body>
+</html>
